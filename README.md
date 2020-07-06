@@ -1,4 +1,4 @@
-# Twitter_Mining
+# Twitter_Crawler
 
 ### Install Virtualenv in CMD:
 
