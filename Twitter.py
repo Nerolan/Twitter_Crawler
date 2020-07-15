@@ -80,7 +80,7 @@ def run():
     localtime = time.localtime()
     result = time.strftime("%I:%M:%S %p", localtime)
     print(result)
-    time.sleep(70)
+    time.sleep(60)
     get_tweets_by_hashtags("#blacklivesmatter").to_csv("blacklivesmatter.csv", mode='a', header=False, index=False)
     run()
 
