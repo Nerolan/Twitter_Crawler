@@ -52,7 +52,7 @@ def get_influencer_tweets(name, count):
     df['Polarity'] = df['Tweets'].apply(get_polarity)
     return df
 
-def get_tweets_by_hashtags(hashtag, date="2020-01-01",nums=200):
+def get_tweets_by_hashtags(hashtag, date="2020-01-01",nums=500):
     hashtag += " -filter:retweets"
     tweets = tweepy.Cursor(api.search, q=hashtag, lang="en", since=date,tweet_mode="extended").items(nums)
     hashtag_info = [[tweet.id_str,tweet.full_text,tweet.user.screen_name, tweet.user.location, tweet.user.followers_count,
@@ -80,7 +80,7 @@ def run():
     localtime = time.localtime()
     result = time.strftime("%I:%M:%S %p", localtime)
     print(result)
-    time.sleep(225)
+    time.sleep(901)
     get_tweets_by_hashtags("#Biden").to_csv("Biden.csv", mode='a', header=False, index=False)
     run()
 
