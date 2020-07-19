@@ -11,7 +11,7 @@ from datetime import datetime
 print("Process started")
 
 
-credentials = pd.read_csv("../credentials_patrick.csv", sep=";")
+credentials = pd.read_csv("../credentials_patrickSuehrer.csv", sep=";")
 AccessToken = credentials['Key'][0]
 AccessTokenSecret = credentials['Key'][1]
 ApiKey = credentials['Key'][2]  # = consumerKey
